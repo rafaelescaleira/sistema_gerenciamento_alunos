@@ -2,7 +2,7 @@
  *                                               *
  * Nome : Rafael Escaleira Ferreira dos Santos.  *
  * Universidade Federal do Mato Grosso do Sul    *
- * Disciplina : Algoritmo e Programação 2		 *
+ * Disciplina : Algoritmo e Programação 2	 *
  *                                               *
  * * * * * * * * * * * * * * * * * * * * * * * * */
 
@@ -15,35 +15,35 @@
 
 /* Descrição
  *
- * O trabalho prático de nossa disciplina consiste na implementação de um sistema para gerenciamento 
- * de alunos da disciplina de Algoritmos e Programação II. Cada aluno da disciplina possui armazenadas 
- * as seguintes informações:
+ * O trabalho prático de nossa disciplina consiste na implementação de um sistema para gerenciamento 
+ * de alunos da disciplina de Algoritmos e Programação II. Cada aluno da disciplina possui armazenadas 
+ * as seguintes informações:
  *
- * 	• Nome (cadeia de caracteres que não devem conter acentos e cedilhas);
+ * 	• Nome (cadeia de caracteres que não devem conter acentos e cedilhas);
  * 	• RA (inteiro);
- * 	• Nota da primeira prova obrigatória (P1);
- * 	• Nota da segunda prova obrigatória (P2);
- * 	• Nota do trabalho prático (T);
+ * 	• Nota da primeira prova obrigatória (P1);
+ * 	• Nota da segunda prova obrigatória (P2);
+ * 	• Nota do trabalho prático (T);
  * 	• Nota da prova optativa (PO).
  *
- * Todas as notas devem ser representadas usando números em ponto flutuante. A média final MF é
- * calculada de acordo com a seguinte fórmula:
+ * Todas as notas devem ser representadas usando números em ponto flutuante. A média final MF é
+ * calculada de acordo com a seguinte fórmula:
  * 
  * 	• MF = 0,35 * P1 * 0,35 * P2 + 0,3 * T,
  *
  * lembrando que a nota da prova optativa (PO) pode substituir a menor das notas de prova (P1 ou P2),
- * caso seja maior que tal nota. O aluno cuja média final for maior ou igual a 6,0 será considerado aprovado,
- * caso contrário, estará reprovado.
+ * caso seja maior que tal nota. O aluno cuja média final for maior ou igual a 6,0 será considerado aprovado,
+ * caso contrário, estará reprovado.
  *
  */
 
 typedef struct _aluno {
 	
-	char nome [MAX_CHAR];	// Nome (cadeia de caracteres que não devem conter acentos e cedilhas);
+	char nome [MAX_CHAR];	// Nome (cadeia de caracteres que não devem conter acentos e cedilhas);
 	long int ra;			// RA (inteiro);
-	double p1;				// Nota da primeira prova obrigatória (P1);
-	double p2;				// Nota da segunda prova obrigatória (P2);
-	double nota_trabalho;	// Nota do trabalho prático (T);
+	double p1;				// Nota da primeira prova obrigatória (P1);
+	double p2;				// Nota da segunda prova obrigatória (P2);
+	double nota_trabalho;	// Nota do trabalho prático (T);
 	double po;				// Nota da prova optativa (PO);
 
 	double media_final;		// MF = 0,35 * P1 * 0,35 * P2 + 0,3 * T;
@@ -73,8 +73,8 @@ typedef struct celula {
 
 /* 1. Cadastrar um novo aluno:
  *
- * Insere um novo aluno na lista contendo os dados for- necidos como entrada pelo usuário. 
- * O usuário deve fornecer dados para todos os campos do aluno (se a PO não tiver sido realizada,
+ * Insere um novo aluno na lista contendo os dados for- necidos como entrada pelo usuário. 
+ * O usuário deve fornecer dados para todos os campos do aluno (se a PO não tiver sido realizada,
  * a nota zero deve ser infor- mada);
  *
  */
@@ -83,9 +83,9 @@ void cadastrar_um_novo_aluno (tipo_celula * lista_alunos);
 
 /* 2. Buscar aluno:
  * 
- * solicita ao usuário uma cadeia de caracteres e lista os nomes com- pletos, a média final
- * e a situação de todos os alunos cujos nomes casam (total ou parcialmente com a cadeia fornecida).
- * A listagem deve mostrar ao final uma contagem do número de resultados encontrados;
+ * solicita ao usuário uma cadeia de caracteres e lista os nomes com- pletos, a média final
+ * e a situação de todos os alunos cujos nomes casam (total ou parcialmente com a cadeia fornecida).
+ * A listagem deve mostrar ao final uma contagem do número de resultados encontrados;
  *
  */
 
@@ -93,10 +93,10 @@ void buscar_aluno (tipo_celula * lista_alunos, char aluno[MAX_CHAR]);
 
 /* 3. Ler arquivo com listagem de alunos:
  *
- * Solicita ao usuário o nome de um arquivo de texto contendo os dados de alunos. 
- * Esse arquivo conterá os dados de, no máximo, um aluno por linha e, em cada linha,
- * todos os dados do aluno deverão ser informados na mesma ordem descrita na descrição
- * da estrutura que define um aluno. Se o aluno não fez PO, o arquivo deve conter a
+ * Solicita ao usuário o nome de um arquivo de texto contendo os dados de alunos. 
+ * Esse arquivo conterá os dados de, no máximo, um aluno por linha e, em cada linha,
+ * todos os dados do aluno deverão ser informados na mesma ordem descrita na descrição
+ * da estrutura que define um aluno. Se o aluno não fez PO, o arquivo deve conter a
  * nota zero no local adequado. Ao final do cadastramento, deve-se mostrar na tela uma
  * contagem de quantos alunos foram cadastrados;
  *
@@ -104,25 +104,25 @@ void buscar_aluno (tipo_celula * lista_alunos, char aluno[MAX_CHAR]);
 
 void ler_arquivo_com_listagem_de_alunos (tipo_celula * lista_alunos);
 
-/* 4. Gerar arquivo com dados dos alunos aprovados, ordenados em ordem alfabética:
+/* 4. Gerar arquivo com dados dos alunos aprovados, ordenados em ordem alfabética:
  * 
- * Escreve um arquivo texto contendo os nomes e as médias finais dos alunos
+ * Escreve um arquivo texto contendo os nomes e as médias finais dos alunos
  * aprovados na disciplina, um aluno por linha. Os alunos constantes no arquivo
- * resultante devem estar em ordem alfabética de nome. Ao final do arquivo,
- * deve aparecer a contagem de alunos aprovados. O nome do arquivo de saída
+ * resultante devem estar em ordem alfabética de nome. Ao final do arquivo,
+ * deve aparecer a contagem de alunos aprovados. O nome do arquivo de saída
  * deve ser aprovados.txt;
  *
  */
 
 void gerar_arquivo_com_dados_dos_alunos_aprovados (tipo_celula * lista_alunos);
 
-/* 5. Gerar arquivo com dados dos alunos reprovados, ordenados em ordem alfabética:
+/* 5. Gerar arquivo com dados dos alunos reprovados, ordenados em ordem alfabética:
  * 
- * Escreve um arquivo texto contendo os nomes e as médias finais dos alunos
+ * Escreve um arquivo texto contendo os nomes e as médias finais dos alunos
  * reprovados na disciplina, um aluno por linha. Os alunos constantes no
- * arquivo resultante devem estar em ordem alfabética de nome. Ao final
+ * arquivo resultante devem estar em ordem alfabética de nome. Ao final
  * do arquivo, deve aparecer a contagem de alunos reprovados. O nome do
- * arquivo de saída deve ser reprovados.txt;
+ * arquivo de saída deve ser reprovados.txt;
  *
  */
 
@@ -131,9 +131,8 @@ void gerar_arquivo_com_dados_dos_alunos_reprovados (tipo_celula * lista_alunos);
 /* Estrutura Lista Duplamente Encadeada
  *
  * 1. Construção;
- * 2. Inserção;
- * 3. Busca Índice;
- * 4. Remoção;
+ * 2. Inserção em Lista Vazia;
+ * 3. Inserção no Início;
  *
  */
 
@@ -185,7 +184,7 @@ int main (int argc, char const * argv[]) {
 
 			break;
 
-			// 4. Gerar arquivo com dados dos alunos aprovados, ordenados em ordem alfabética
+			// 4. Gerar arquivo com dados dos alunos aprovados, ordenados em ordem alfabética
 			case 4:
 
 			gerar_arquivo_com_dados_dos_alunos_aprovados (lista_alunos);
@@ -193,7 +192,7 @@ int main (int argc, char const * argv[]) {
 
 			break;
 
-			// 5. Gerar arquivo com dados dos alunos reprovados, ordenados em ordem alfabética:
+			// 5. Gerar arquivo com dados dos alunos reprovados, ordenados em ordem alfabética:
 			case 5:
 
 			gerar_arquivo_com_dados_dos_alunos_reprovados (lista_alunos);
@@ -467,13 +466,13 @@ int constroi_menu_operacao () {
 
 	int operacao;
 
-	printf ("\n\t\033[31m Algoritmos e Programação II\033[0m\n\n");
+	printf ("\n\t\033[31m Algoritmos e Programação II\033[0m\n\n");
 
 	printf ("\033[31m 1.\033[0m Cadastrar um novo aluno;\n");
 	printf ("\033[31m 2.\033[0m Buscar aluno;\n");
 	printf ("\033[31m 3.\033[0m Ler arquivo com listagem de alunos;\n");
-	printf ("\033[31m 4.\033[0m Gerar arquivo com dados dos alunos aprovados, ordenados em ordem alfabética;\n");
-	printf ("\033[31m 5.\033[0m Gerar arquivo com dados dos alunos reprovados, ordenados em ordem alfabética;\n");
+	printf ("\033[31m 4.\033[0m Gerar arquivo com dados dos alunos aprovados, ordenados em ordem alfabética;\n");
+	printf ("\033[31m 5.\033[0m Gerar arquivo com dados dos alunos reprovados, ordenados em ordem alfabética;\n");
 	printf ("\033[31m 6.\033[0m Fechar programa;\n\n");
 
 	printf (" Informe o número da operação desejada: \033[31m");
