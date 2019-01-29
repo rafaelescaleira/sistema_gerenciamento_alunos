@@ -1,6 +1,9 @@
 Sistema de Gerenciamento de Alunos de Algoritmos e Programação II
 =================================================================
 
+![Build](https://img.shields.io/gitlab/pipeline/rafaelescaleira/sistema_gerenciamento_alunos.svg)
+![License](https://img.shields.io/github/license/rafaelescaleira/sistema_gerenciamento_alunos.svg)
+
   Sistema para gerenciamento de alunos da disciplina de Algoritmos e Programação II.
 
 Descrição
