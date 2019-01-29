@@ -1,4 +1,0 @@
-3
-primeira_entrada.text
-2
-Nome Aluno
